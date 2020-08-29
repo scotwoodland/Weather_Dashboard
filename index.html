@@ -10,83 +10,66 @@
     <title>Weather Dashboard</title>
   </head>
   <body>
+      <!-- Jumbotron - Title  -->
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
           <h1 class="display-2">Weather Dashboard</h1>
           <p class="lead">Look up the current weather and 5-day forecast for your travel destination.</p>
+          <p class="lead" id=currentDay></p></p>
         </div>
     </header>
+    <!-- Multiple containers for the data  -->
     <div class="container">
         <div class="row">
+        <!-- search field and search button  -->
           <div id="searchWin" class="col-3">
               <h2>Search Window</h2>
-                <form class="form-inline">
-                    <div class="form-group mb-2">
-                    <label for="staticEmail2" class="sr-only">Email</label>
-                    </div>
-                    <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputPassword2" class="sr-only">Enter City</label>
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Enter City">
-                    </div>
-                    <button type="submit" class="btn btn-primary mb-2">Search</button>
-                </form>                 
+              <form class="form-inline">
+                <div class="form-group mx-sm mb">
+                <textarea type="search" class="form-control" id="searchField" placeholder="Enter City"></textarea>
+                </div>
+                <button id="searchBtn" type="submit" class="btn btn-primary mb-2">Search</button>
+              </form>  
+              <!-- Buttons/fields will be added from the internal storage                -->
+              <div id="searchWinBtns" class="list-group-item">
+                <ul>
+                  <li>This is a test</li>
+                  <li>This is yet another</li>
+                  <li>Yep...another</li>
+                </ul>
+                <!-- <button>These will be js based</button>
                 <button>These will be js based</button>
-                <button>These will be js based</button>
-                <button>These will be js based</button>
-                </form>
+                <button>These will be js based</button> -->
+              </div>
           </div>
+          <!-- Right side of the screen, (not the search screen) -->
           <div id="rightWin" class="col-9">
-              <h1>Today's Weather</h1>
+              <h1 id="weatherTitle">Today's Weather is </h1>
             <div class="col-sm-12">
-                <h5>City Name</h5>
+                <h5 id="cityName">City Name</h5>
                 <div class="row">
                   <div class="col-8 col-sm-6">
-                    <h5>Temperature</h5>
-                    <h5>Humidity</h5>
-                    <h5>Wind Speed</h5>
-                    <h5>Uv Index</h5>
-                    <button>"Uv Index and color"</button>
+                    <h5 id="temp">Temperature</h5>
+                    <h5 id="humidity">Humidity</h5>
+                    <h5 id="wind">Wind Speed</h5>
+                    <h5 id="uvIndex">Uv Index</h5>
+                    <button id="uvBtn"></button>
                   </div>
-                  <div class="col-4 col-sm-6">Image of Cityh
-                    <img src="" alt="City Picture">
-                  </div>
+                  <!-- <div class="col-4 col-sm-6">Image of Cityh
+                    <img id="cityImage" src="" alt="City Picture">
+                  </div> -->
                 </div>
               </div>
               <br>
-              <hr>
-              <div class="col-sm-12">
+              
+              <div id="forecastWin" class="col-sm-12">
                 <h3>5-Day Forecast</h3>
                 <div class="row">
-                  <div id="card1" class="col">
-                    <p>Date</p>
-                    <img src="" alt="">Weather .img
-                    <p>Temp</p>
-                    <p>Humidity</p>
-                  </div>
-                  <div id="card2" class="col">
-                    <p>Date</p>
-                    <img src="" alt="">Weather .img
-                    <p>Temp</p>
-                    <p>Humidity</p>
-                  </div>
-                  <div id="card3" class="col">
-                    <p>Date</p>
-                    <img src="" alt="">Weather .img
-                    <p>Temp</p>
-                    <p>Humidity</p>
-                  </div>
-                  <div id="card4" class="col">
-                    <p>Date</p>
-                    <img src="" alt="">Weather .img
-                    <p>Temp</p>
-                    <p>Humidity</p>
-                  </div>
-                  <div id="card5" class="col">
-                    <p>Date</p>
-                    <img src="" alt="">Weather .img
-                    <p>Temp</p>
-                    <p>Humidity</p>
-                  </div>
+                  <div id="card1" class="col"></div>
+                  <div id="card2" class="col"></div>
+                  <div id="card3" class="col"></div>
+                  <div id="card4" class="col"></div>
+                  <div id="card5" class="col"></div>
                 </div>
               </div>
           </div>
@@ -94,15 +77,17 @@
       </div>
       <br>
       <hr>
-      <blockquote class="blockquote text-right">
-        <p class="mb-0">Created by an very overworked student!</p>
+      <blockquote id="footer" class="blockquote text-right">
+        <p class="mb-0">Created by a very overworked student!</p>
         <footer class="blockquote-footer">Scot Woodland</footer>
       </blockquote>
 
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!-- jQuery first, then my script.js file, then Popper.js, then Bootstrap JS -->
+    <script src="./moment.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   </body>
