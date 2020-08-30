@@ -15,32 +15,41 @@
         <div class="container">
           <h1 class="display-2">Weather Dashboard</h1>
           <p class="lead">Look up the current weather and 5-day forecast for your travel destination.</p>
-          <p class="lead" id=currentDay></p></p>
+          <h3 id=currentDay></h3>
         </div>
     </header>
     <!-- Multiple containers for the data  -->
-    <div class="container">
+    <div class="container" id=>
         <div class="row">
         <!-- search field and search button  -->
           <div id="searchWin" class="col-3">
               <h2>Search Window</h2>
-              <form class="form-inline">
+              <form id="city-form">
+                <label for="city-input">Enter a City Name!</label>
+                <input type="text" id="city-input">
+                <br>
+          
+                <!-- Button triggers new movie to be added -->
+                <input id="add-city" type="submit" value="Enter">
+              </form>
+
+              <!-- <form class="form-inline">
                 <div class="form-group mx-sm mb">
-                <textarea type="search" class="form-control" id="searchField" placeholder="Enter City"></textarea>
+                <input type="search" class="form-control" id="searchField" placeholder="Enter City"></input>
                 </div>
-                <button id="searchBtn" type="submit" class="btn btn-primary mb-2">Search</button>
-              </form>  
+                <button id="searchBtn" class="btn btn-primary mb-2">Search</button>
+              </form>   -->
               <!-- Buttons/fields will be added from the internal storage                -->
-              <div id="searchWinBtns" class="list-group-item">
-                <ul>
+              <!-- <div id="searchWinBtns" class="list-group-item"> -->
+                <!-- <ul>
                   <li>This is a test</li>
                   <li>This is yet another</li>
                   <li>Yep...another</li>
                 </ul>
+              </div> -->
                 <!-- <button>These will be js based</button>
                 <button>These will be js based</button>
                 <button>These will be js based</button> -->
-              </div>
           </div>
           <!-- Right side of the screen, (not the search screen) -->
           <div id="rightWin" class="col-9">
@@ -65,11 +74,36 @@
               <div id="forecastWin" class="col-sm-12">
                 <h3>5-Day Forecast</h3>
                 <div class="row">
-                  <div id="card1" class="col"></div>
-                  <div id="card2" class="col"></div>
-                  <div id="card3" class="col"></div>
-                  <div id="card4" class="col"></div>
-                  <div id="card5" class="col"></div>
+                  <div id="card1" class="col">
+                    <h5 id="one"></h5>
+                    <img id="two" src="" alt="">
+                    <h5 id="three"></h5>
+                    <h5 id="four"></h5>
+                  </div>
+                  <div id="card2" class="col">                    
+                    <h5 id="five"></h5>
+                    <img id="six" src="" alt="">
+                    <h5 id="seven"></h5>
+                    <h5 id="eight"></h5>
+                  </div>
+                  <div id="card3" class="col">
+                    <h5 id="nine"></h5>
+                    <img id="ten" src="" alt="">
+                    <h5 id="eleven"></h5>
+                    <h5 id="twelve"></h5>
+                  </div>
+                  <div id="card4" class="col">
+                    <h5 id="thirteen"></h5>
+                    <img id="fourteen" src="" alt="">
+                    <h5 id="fifteen"></h5>
+                    <h5 id="sixteen"></h5>
+                  </div>
+                  <div id="card5" class="col">
+                    <h5 id="seventeen"></h5>
+                    <img id="eighteen" src="" alt="">
+                    <h5 id="nineteen"></h5>
+                    <h5 id="twenty"></h5>
+                  </div>
                 </div>
               </div>
           </div>
@@ -79,7 +113,7 @@
       <hr>
       <blockquote id="footer" class="blockquote text-right">
         <p class="mb-0">Created by a very overworked student!</p>
-        <footer class="blockquote-footer">Scot Woodland</footer>
+        <footer class="blockquote-footer">Scot W</footer>
       </blockquote>
 
 
