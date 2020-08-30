@@ -9,10 +9,6 @@ var uvField = $("#uvIndex");
 var cityImage = $("#cityImage");
 var weatherTitle = $("#weatherTitle");
 
-
-// This is for the five day forecast!
-// var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + "denver" + "&appid=807d8a15787dc99f68e7ff8c4e102c45&units=imperial";
-
 //  Input the Current Date and Time 
 let m = moment();
 let currentDate = m.toDate();
@@ -77,8 +73,6 @@ $("#add-city").on("click", function(event) {
       
       uvField.html($("<span>" + "Uv Index: " + response.current.uvi + "</span>"));
       
-      // var uvIndex = $("<p>").addClass("card-text").text("UV Index: ");
-      // var uvBtn = $("#uvBtn").addClass("btn btn-sm").text(uvResponse);
       var uvBtn = $("#uvBtn");
       
       if (response.current.uvi < 3) {
@@ -114,34 +108,6 @@ $("#add-city").on("click", function(event) {
       $("#nineteen").text("High: " + kelvin);
       $("#twenty").text("Humidity: " + response.daily[4].humidity);
            
-      // card1.append($("<h5>" + "Weather: " + response.daily[0].weather[0].description + "</h5>"));
-      // card1.append($("<img>").attr("src", "https://openweathermap.org/img/w/" + response.daily[0].weather[0].icon + ".png"));
-      // card1.append($("<h5>" + "High: " + kelvin + "</h5>"));
-      // card1.append($("<h5>" + "Humidity: " + response.daily[0].humidity + "</h5>"));
-
-      // card2.append($("<h5>" + "Weather: " + response.daily[1].weather[0].description + "</h5>"));
-      // card2.append($("<img>").attr("src", "https://openweathermap.org/img/w/" + response.daily[1].weather[0].icon + ".png"));
-      // card2.append($("<h5>" + "High: " + kelvin2 + "</h5>"));
-      // card2.append($("<h5>" + "Humidity: " + response.daily[1].humidity + "</h5>"));
-      
-      // card3.append($("<h5>" + "Weather: " + response.daily[2].weather[0].description + "</h5>"));
-      // card3.append($("<img>").attr("src", "https://openweathermap.org/img/w/" + response.daily[2].weather[0].icon + ".png"));
-      // card3.append($("<h5>" + "High: " + kelvin3 + "</h5>"));
-      // card3.append($("<h5>" + "Humidity: " + response.daily[2].humidity + "</h5>"));
-      
-      // card4.append($("<h5>" + "Weather: " + response.daily[3].weather[0].description + "</h5>"));
-      // card4.append($("<img>").attr("src", "https://openweathermap.org/img/w/" + response.daily[3].weather[0].icon + ".png"));
-      // card4.append($("<h5>" + "High: " + kelvin4 + "</h5>"));
-      // card4.append($("<h5>" + "Humidity: " + response.daily[3].humidity + "</h5>"));
-      
-      // card5.append($("<h5>" + "Weather: " + response.daily[4].weather[0].description + "</h5>"));
-      // card5.append($("<img>").attr("src", "https://openweathermap.org/img/w/" + response.daily[4].weather[0].icon + ".png"));
-      // card5.append($("<h5>" + "High: " + kelvin5 + "</h5>"));
-      // card5.append($("<h5>" + "Humidity: " + response.daily[4].humidity + "</h5>"));
-      
-      
-      
-      
       console.log(response);
       console.log("UV: " + response.current.uvi);
       console.log("Tomorrow: " + response.daily[0].weather[0].description);
