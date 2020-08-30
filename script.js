@@ -94,25 +94,25 @@ $("#add-city").on("click", function(event) {
       $("#three").text("High: " + kelvin);
       $("#four").text("Humidity: " + response.daily[0].humidity);
       
-      $("#five").text("Weather: " + response.daily[0].weather[0].description);
-      $("#six").attr("src", "https://openweathermap.org/img/w/" + response.daily[0].weather[0].icon + ".png");
+      $("#five").text("Weather: " + response.daily[1].weather[0].description);
+      $("#six").attr("src", "https://openweathermap.org/img/w/" + response.daily[1].weather[0].icon + ".png");
       $("#seven").text("High: " + kelvin);
-      $("#eight").text("Humidity: " + response.daily[0].humidity);
+      $("#eight").text("Humidity: " + response.daily[1].humidity);
       
-      $("#nine").text("Weather: " + response.daily[0].weather[0].description);
-      $("#ten").attr("src", "https://openweathermap.org/img/w/" + response.daily[0].weather[0].icon + ".png");
+      $("#nine").text("Weather: " + response.daily[2].weather[0].description);
+      $("#ten").attr("src", "https://openweathermap.org/img/w/" + response.daily[2].weather[0].icon + ".png");
       $("#eleven").text("High: " + kelvin);
-      $("#twelve").text("Humidity: " + response.daily[0].humidity);
+      $("#twelve").text("Humidity: " + response.daily[2].humidity);
       
-      $("#thirteen").text("Weather: " + response.daily[0].weather[0].description);
-      $("#fourteen").attr("src", "https://openweathermap.org/img/w/" + response.daily[0].weather[0].icon + ".png");
+      $("#thirteen").text("Weather: " + response.daily[3].weather[0].description);
+      $("#fourteen").attr("src", "https://openweathermap.org/img/w/" + response.daily[3].weather[0].icon + ".png");
       $("#fifteen").text("High: " + kelvin);
-      $("#sixteen").text("Humidity: " + response.daily[0].humidity);
+      $("#sixteen").text("Humidity: " + response.daily[3].humidity);
       
-      $("#seventeen").text("Weather: " + response.daily[0].weather[0].description);
-      $("#eighteen").attr("src", "https://openweathermap.org/img/w/" + response.daily[0].weather[0].icon + ".png");
+      $("#seventeen").text("Weather: " + response.daily[4].weather[0].description);
+      $("#eighteen").attr("src", "https://openweathermap.org/img/w/" + response.daily[4].weather[0].icon + ".png");
       $("#nineteen").text("High: " + kelvin);
-      $("#twenty").text("Humidity: " + response.daily[0].humidity);
+      $("#twenty").text("Humidity: " + response.daily[4].humidity);
            
       // card1.append($("<h5>" + "Weather: " + response.daily[0].weather[0].description + "</h5>"));
       // card1.append($("<img>").attr("src", "https://openweathermap.org/img/w/" + response.daily[0].weather[0].icon + ".png"));
